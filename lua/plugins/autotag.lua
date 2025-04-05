@@ -1,7 +1,7 @@
 return {
 	"windwp/nvim-ts-autotag",
 	config = function()
-		require('nvim-ts-autotag').PluginSetup({
+		require('nvim-ts-autotag').setup({
 			opts = {
 				-- Defaults
 				enable_close = true,      -- Auto close tags

@@ -2,4 +2,4 @@
 -- vim.cmd("colorscheme monokai-pro")
 -- vim.cmd("colorscheme kanagawa")
 -- vim.cmd("colorscheme kanagawa-dragon")
-vim.cmd("colorscheme vscode")
+-- vim.cmd("colorscheme vscode")

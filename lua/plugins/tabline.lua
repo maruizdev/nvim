@@ -1,6 +1,6 @@
 return {
-    'crispgm/nvim-tabline',
-    dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional
-    config = true,
+    -- 'crispgm/nvim-tabline',
+    -- dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional
+    -- config = true,
 }
 

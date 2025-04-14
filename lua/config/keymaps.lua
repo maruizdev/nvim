@@ -30,14 +30,17 @@ vim.keymap.set('n',"<F4>", ":Bdelete<CR>", {noremap =true, silent = true}) ]]
 -- Navigation commands
 vim.keymap.set('n', '<S-TAB>', ':bprevious<CR>', opts)
 vim.keymap.set('n', '<TAB>', ':bnext<CR>', opts)
-vim.keymap.set('n', '<S-T>', ':tabnew<CR>', opts)
-vim.keymap.set('i', '<S-t>', '<Esc>:tabnew<CR>', opts)
-vim.keymap.set('n',"<F5>", ":Bdelete<CR>", {noremap =true, silent = true})
+-- vim.keymap.set('n', '<S-T>', ':tabnew<CR>', opts)
+-- vim.keymap.set('i', '<S-t>', '<Esc>:tabnew<CR>', opts)
+vim.keymap.set('n',"<leader>q", ":Bdelete<CR>", {noremap =true, silent = true})
 
 
 --save file
 vim.keymap.set('n', '<C-s>', ':w<CR>', opts)
 vim.keymap.set('i', '<C-s>', '<esc>:w<CR>', opts)
+-- Folding
+vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
+vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
 
 --aerial
 vim.keymap.set("n", "<leader>m", "<cmd>AerialToggle!<CR>")

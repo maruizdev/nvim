@@ -1,5 +1,4 @@
 -- vim.cmd("colorscheme gruvbox-material")
--- vim.cmd("colorscheme monokai-pro")
-vim.cmd("colorscheme kanagawa")
--- vim.cmd("colorscheme kanagawa-dragon")
 -- vim.cmd("colorscheme vscode")
+-- vim.cmd("colorscheme sonokai")
+vim.cmd("colorscheme catppuccin")

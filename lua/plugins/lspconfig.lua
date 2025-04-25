@@ -61,8 +61,10 @@ return {
 			},
 			filetypes = {
 				"javascript",
+				"javascriptreact",
 				"typescript",
 				"vue",
+				"typescriptreact"
 			},
 		}
 		

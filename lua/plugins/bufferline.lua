@@ -1,5 +1,5 @@
 return {
-	--[[ 'akinsho/bufferline.nvim',
+	'akinsho/bufferline.nvim',
 	version = '*',
 	dependencies = {
 		'nvim-tree/nvim-web-devicons',
@@ -10,7 +10,7 @@ return {
 			numbers = "ordinal",
 			separator_style = "padded_slant"
 		}
-	}, ]]
+	},
 
 	--[[ config = function()
 		options = {

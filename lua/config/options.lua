@@ -9,14 +9,7 @@ vim.opt.cursorline = true
 vim.opt.showmatch = true
 vim.opt.sw = 2
 
--- vim.o.scrolloff = 999
--- vim.api.nvim_create_autocmd({"CursorMoved" },{
---     pattern = "*",
---     callback = function()
---         vim.cmd("normal! zz")
---     end
--- })
-vim.api.nvim_create_autocmd("CursorMoved", {
+--[[ vim.api.nvim_create_autocmd("CursorMoved", {
   pattern = "*",
   callback = function()
     local winview = vim.fn.winsaveview()
@@ -24,4 +17,4 @@ vim.api.nvim_create_autocmd("CursorMoved", {
       vim.cmd("normal! zz")
     end
   end,
-})
+}) ]]

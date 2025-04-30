@@ -14,10 +14,10 @@ return {
 			defaults = {
 				mappings = {
 					i = {
-						["t"] = actions.select_tab,
+						["<C-t>"] = actions.select_tab,
 					},
 					n = {
-						["t"] = actions.select_tab,
+						["<c-t>"] = actions.select_tab,
 					},
 				},
 			},

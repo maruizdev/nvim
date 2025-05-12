@@ -13,7 +13,6 @@ local function my_on_attach(bufnr)
 	vim.keymap.set('n', 't', api.node.open.tab, opts('Open'))
 	vim.keymap.set('n', 's', api.node.open.vertical, opts('Open'))
 	vim.keymap.set('n', '<s-s>', api.node.open.horizontal, opts('Open'))
-	vim.keymap.set('n', 't', api.node.open.tab, opts('Open'))
 	vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
 end
 

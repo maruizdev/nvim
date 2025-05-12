@@ -35,9 +35,6 @@ vim.keymap.set('n',"<leader>q", ":Bdelete<CR>", {noremap =true, silent = true})
 --save file
 vim.keymap.set('n', '<C-s>', ':w<CR>', opts)
 vim.keymap.set('i', '<C-s>', '<esc>:w<CR>', opts)
--- Folding
-vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
-vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
 
 --aerial
 vim.keymap.set("n", "<leader>m", "<cmd>AerialToggle!<CR>")

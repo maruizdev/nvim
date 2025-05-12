@@ -68,40 +68,7 @@ return {
 			},
 		}
 		
-		-- local project_library_path = "/home/marcelo/.nvm/versions/node/v20.18.0/lib/node_modules/@angular/language-server"
-		-- local cmd = {"ngserver", "--stdio", "--tsProbeLocations", project_library_path , "--ngProbeLocations", project_library_path}
 
-		local ok, mason_registry = pcall(require, 'mason-registry')
-		if not ok then
-			vim.notify 'mason-registry could not be loaded'
-			return
-		end
-
-		local angularls_path = mason_registry.get_package('angular-language-server'):get_install_path()
-
-
-		local cmd = {
-			'ngserver',
-			'--stdio',
-			'--tsProbeLocations',
-			table.concat({
-				angularls_path,
-				vim.uv.cwd(),
-			}, ','),
-			'--ngProbeLocations',
-			table.concat({
-				angularls_path .. '/node_modules/@angular/language-server',
-				vim.uv.cwd(),
-			}, ','),
-		}
-
-		require'lspconfig'.angularls.setup{
-			on_attach = on_attach,
-			cmd = cmd,
-			on_new_config = function(new_config,new_root_dir)
-				new_config.cmd = cmd
-			end
-		}
 
 		require'lspconfig'.emmet_language_server.setup{
 			on_attach = on_attach,

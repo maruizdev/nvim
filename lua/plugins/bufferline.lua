@@ -12,13 +12,13 @@ return {
 		}
 	},
 
-	--[[ config = function()
+	config = function()
 		options = {
 			separator_style = "slant",   -- o "thick", "thin", "flat" según prefieras
 			always_show_bufferline = true, -- Muestra siempre la barra de buffers
 			show_buffer_close_icons = true,
 			show_close_icon = true,
 		}
-	end ]]
+	end
 
 }

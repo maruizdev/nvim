@@ -4,25 +4,31 @@ return {
 	dependencies = {
 		'nvim-treesitter/nvim-treesitter-refactor'
 	},
-	main = 'nvim-treesitter.configs',
-	opts = {
-		ensure_installed = { "html", "css", "scss", "vue", "javascript", "typescript", "tsx", "svelte", "json" },
-		highlight = {
-			enable = true,
-			use_languagetree = true,
-		},
-		refactor = {
-			highlight_definitions = {
+	build = ":TSUpdate",
+	config = function()
+		local configs = require('nvim-treesitter.configs')
+		configs.setup({
+			highlight = {
 				enable = true,
-				clear_on_cursor_move = true
+				use_languagetree = true,
 			},
-			highlight_current_scope = { enable = false },
-			smart_rename = {
-				enable = true,
-				keymaps = {
-					smart_rename = "tr",
-				},
+			ensure_installed = {
+				"html",
+				"css",
+				"scss",
+				"vue",
+				"javascript",
+				"typescript",
+				"tsx",
+				"svelte",
+				"json",
+				"php",
+				"lua",
+				"vim",
+				"c",
+				"bash"
 			},
-		}
-	}
+			auto_install = false
+		})
+	end
 }

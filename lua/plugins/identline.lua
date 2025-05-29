@@ -3,8 +3,6 @@ return {
 	main = "ibl",
 	config = function()
 		require("ibl").setup {
-			indent = { char="|", highlight = "Comment"},
-			scope = { enabled = false }
 		}
 	end
 }

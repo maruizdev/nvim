@@ -2,6 +2,9 @@ return {
 	"lukas-reineke/indent-blankline.nvim",
 	main = "ibl",
 	config = function()
-		require("ibl").setup {}
+		require("ibl").setup {
+			indent = { char="|", highlight = "Comment"},
+			scope = { enabled = false }
+		}
 	end
 }

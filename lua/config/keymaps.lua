@@ -1,10 +1,10 @@
 local opts = { noremap = true}
 --nvim-tree
-vim.keymap.set("n", "<F3>", function()
+vim.keymap.set("n", "<space>e", function()
 	vim.cmd("NvimTreeToggle")
 end)
 
-vim.keymap.set("n", "<F2>", function()
+vim.keymap.set("n", "<space>s", function()
 	vim.cmd("NvimTreeFindFile")
 end)
 
@@ -40,5 +40,5 @@ vim.keymap.set('i', '<C-s>', '<esc>:w<CR>', opts)
 vim.keymap.set("n", "<leader>m", "<cmd>AerialToggle!<CR>")
 
 --prettier
-vim.keymap.set('n', "<leader>p", ":Prettier<CR>", { noremap = true, silent = true })
-vim.keymap.set('x', "<leader>p", ":Prettier<CR>", { noremap = true, silent = true })
+-- vim.keymap.set('n', "<leader>p", ":Prettier<CR>", { noremap = true, silent = true })
+-- vim.keymap.set('x', "<leader>p", ":Prettier<CR>", { noremap = true, silent = true })

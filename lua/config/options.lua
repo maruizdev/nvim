@@ -8,8 +8,9 @@ vim.bo.softtabstop = 2
 vim.opt.cursorline = true
 vim.opt.showmatch = true
 vim.opt.sw = 2
-vim.cmd [[
-  highlight Cursor guifg=NONE guibg=#eb6f92
-  highlight iCursor guifg=NONE guibg=#9ccfd8
-  set guicursor=n-v-c:block-Cursor,i-ci-ve:ver25-iCursor
-]]
+
+-- vim.cmd [[
+--   highlight Cursor guifg=NONE guibg=#eb6f92
+--   highlight iCursor guifg=NONE guibg=#9ccfd8
+--   set guicursor=n-v-c:block-Cursor,i-ci-ve:ver25-iCursor
+-- ]]

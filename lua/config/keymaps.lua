@@ -1,10 +1,10 @@
 local opts = { noremap = true}
 --nvim-tree
-vim.keymap.set("n", "<F3>", function()
+vim.keymap.set("n", "<space>e", function()
 	vim.cmd("NvimTreeToggle")
 end)
 
-vim.keymap.set("n", "<F2>", function()
+vim.keymap.set("n", "<space>fe", function()
 	vim.cmd("NvimTreeFindFile")
 end)
 
@@ -21,15 +21,10 @@ vim.keymap.set("n", "<C-l>", [[<Cmd>wincmd l<CR>]], { desc = "Move right" })
 vim.keymap.set('n', "<S-Tab>", ":tabprevious<CR>", { noremap = true })
 vim.keymap.set('n', "<S-t>", ":tabnew<CR>", { noremap = true, silent = true }) ]]
 
--- bufferline
---[[ vim.keymap.set('n',"<Tab>", ":BufferLineCycleNext<CR>", {noremap =true, silent = true})
-vim.keymap.set('n',"<S-Tab>", ":BufferLineCyclePrev<CR>", {noremap =true, silent = true})
-vim.keymap.set('n',"<F4>", ":Bdelete<CR>", {noremap =true, silent = true}) ]]
-
--- Navigation commands
-vim.keymap.set('n', '<S-TAB>', ':bprevious<CR>', opts)
-vim.keymap.set('n', '<TAB>', ':bnext<CR>', opts)
-vim.keymap.set('n',"<leader>q", ":Bdelete<CR>", {noremap =true, silent = true})
+-- Navigation commands bufferline
+-- vim.keymap.set('n', '<S-TAB>', ':bprevious<CR>', opts)
+-- vim.keymap.set('n', '<TAB>', ':bnext<CR>', opts)
+-- vim.keymap.set('n',"<leader>q", ":Bdelete<CR>", {noremap =true, silent = true})
 
 
 --save file
@@ -39,6 +34,3 @@ vim.keymap.set('i', '<C-s>', '<esc>:w<CR>', opts)
 --aerial
 vim.keymap.set("n", "<leader>m", "<cmd>AerialToggle!<CR>")
 
---prettier
-vim.keymap.set('n', "<leader>p", ":Prettier<CR>", { noremap = true, silent = true })
-vim.keymap.set('x', "<leader>p", ":Prettier<CR>", { noremap = true, silent = true })

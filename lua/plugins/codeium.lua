@@ -1,5 +1,5 @@
 return {
-	"Exafunction/windsurf.nvim",
+	--[[ "Exafunction/windsurf.nvim",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"hrsh7th/nvim-cmp",
@@ -7,5 +7,5 @@ return {
 	config = function()
 		require("codeium").setup({
 		})
-	end
+	end ]]
 }

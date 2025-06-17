@@ -100,7 +100,7 @@ function M.setup()
       ["<c-space>"] = cmp.mapping.complete(),
     },
     sources = {
-      { name = "codeium" },
+      -- { name = "codeium" },
       { name = "nvim_lsp" },
       { name = "path" },
       { name = "luasnip" },

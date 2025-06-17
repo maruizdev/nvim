@@ -9,8 +9,34 @@ vim.opt.cursorline = true
 vim.opt.showmatch = true
 vim.opt.sw = 2
 
--- vim.cmd [[
---   highlight Cursor guifg=NONE guibg=#eb6f92
---   highlight iCursor guifg=NONE guibg=#9ccfd8
---   set guicursor=n-v-c:block-Cursor,i-ci-ve:ver25-iCursor
--- ]]
+vim.o.showtabline = 2  -- Siempre mostrar la tabline
+
+vim.o.tabline = "%!v:lua.TabLine()"
+
+function _G.TabLine()
+  local s = ''
+  for i = 1, vim.fn.tabpagenr('$') do
+    local winnr = vim.fn.tabpagewinnr(i)
+    local buflist = vim.fn.tabpagebuflist(i)
+    local bufnr = buflist[winnr]
+    local path = vim.fn.bufname(bufnr)
+
+    local display
+    if path == '' then
+      display = '[No Name]'
+    else
+      local dir = vim.fn.fnamemodify(path, ':h:t') -- último directorio
+      local file = vim.fn.fnamemodify(path, ':t')  -- nombre del archivo
+      display = dir .. '/' .. file
+    end
+
+    if i == vim.fn.tabpagenr() then
+      s = s .. '%#TabLineSel#'
+    else
+      s = s .. '%#TabLine#'
+    end
+    s = s .. '%' .. i .. 'T' .. ' ' .. i .. ': ' .. display .. ' '
+  end
+  s = s .. '%#TabLineFill#'
+  return s
+end
